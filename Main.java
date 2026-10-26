@@ -4,7 +4,7 @@ public class Main {
         ArvoreMorse arvore = new ArvoreMorse();
         arvore.carregarAlfabeto();
 
-        Menu menu = new Menu(arvore, new ImpressoraArvore());
+        Menu menu = new Menu(arvore, new ImpressoraArvore(), new SomMorse());
         menu.executar();
     }
 }

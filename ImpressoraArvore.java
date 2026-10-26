@@ -1,8 +1,5 @@
 import java.util.Arrays;
 
-/**
- * Desenha uma árvore Morse no console, de cima para baixo, com a raiz no topo.
- */
 public class ImpressoraArvore {
 
     private static final char SIMBOLO_NO_VAZIO = '*';
@@ -28,10 +25,6 @@ public class ImpressoraArvore {
         }
     }
 
-    /**
-     * Desenha um nó e seus filhos na matriz "tela".
-     * Os filhos ficam a "deslocamento" colunas do pai, e esse valor cai pela metade a cada nível.
-     */
     private void desenharNo(char[][] tela, NoMorse no, int nivel, int coluna, int deslocamento) {
         int linhaNo = nivel * 2;
         int linhaLigacao = linhaNo + 1;
@@ -57,9 +50,6 @@ public class ImpressoraArvore {
         }
     }
 
-    /**
-     * Altura = número de níveis da árvore (a raiz sozinha tem altura 1).
-     */
     private int calcularAltura(NoMorse no) {
         if (no == null) {
             return 0;

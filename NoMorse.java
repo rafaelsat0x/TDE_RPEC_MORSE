@@ -1,14 +1,9 @@
-/**
- * Representa um nó da árvore Morse.
- * Ponto (.) leva ao filho da esquerda; traço (-) leva ao filho da direita.
- */
 public class NoMorse {
 
     private char caractere;
     private NoMorse esquerda;
     private NoMorse direita;
 
-    // Cria um nó vazio (sem letra), usado para a raiz e para caminhos intermediários
     public NoMorse() {
         this.caractere = ' ';
     }

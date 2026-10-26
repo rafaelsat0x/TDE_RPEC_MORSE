@@ -8,9 +8,6 @@ public class ArvoreMorse {
         this.raiz = new NoMorse();
     }
 
-    /**
-     * Insere na árvore todas as letras (A-Z) e números (0-9) da tabela Morse.
-     */
     public void carregarAlfabeto() {
         for (String[] linha : TabelaMorse.CODIGOS) {
             char caractere = linha[0].charAt(0);
@@ -41,10 +38,6 @@ public class ArvoreMorse {
         atual.setCaractere(caractere);
     }
 
-    /**
-     * Decodifica o código de UM caractere (ex.: ".-" -> 'A').
-     * Retorna '?' se o caminho não existir ou terminar num nó sem letra.
-     */
     public char decodificarCaractere(String codigo) {
         NoMorse atual = raiz;
 
@@ -65,10 +58,6 @@ public class ArvoreMorse {
         return atual.temCaractere() ? atual.getCaractere() : CARACTERE_DESCONHECIDO;
     }
 
-    /**
-     * Decodifica uma mensagem inteira.
-     * Letras são separadas por espaço e palavras por " / " (ex.: "... --- ... / .-" -> "SOS A").
-     */
     public String decodificarMensagem(String mensagemMorse) {
         StringBuilder resultado = new StringBuilder();
         String[] palavras = mensagemMorse.trim().split("\\s*/\\s*");
@@ -87,10 +76,6 @@ public class ArvoreMorse {
         return resultado.toString();
     }
 
-    /**
-     * Codifica um texto para Morse (ex.: "SOS A" -> "... --- ... / .-").
-     * Caracteres que não existem na árvore viram '?'.
-     */
     public String codificarMensagem(String texto) {
         StringBuilder resultado = new StringBuilder();
         String[] palavras = texto.trim().toUpperCase().split("\\s+");
@@ -113,10 +98,6 @@ public class ArvoreMorse {
         return resultado.toString();
     }
 
-    /**
-     * Procura o caractere na árvore e devolve o caminho até ele (o próprio código Morse).
-     * Cada passo à esquerda acrescenta "." ao caminho e cada passo à direita acrescenta "-".
-     */
     private String buscarCodigo(NoMorse no, char caractere, String caminho) {
         if (no == null) {
             return null;

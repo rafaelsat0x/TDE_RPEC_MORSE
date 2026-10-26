@@ -1,6 +1,3 @@
-/**
- * Tabela com os códigos Morse das letras (A-Z) e números (0-9).
- */
 public final class TabelaMorse {
 
     public static final String[][] CODIGOS = {
@@ -14,7 +11,6 @@ public final class TabelaMorse {
         {"5", "....."}, {"6", "-...."}, {"7", "--..."}, {"8", "---.."}, {"9", "----."}
     };
 
-    // Classe só de dados: não faz sentido criar objetos dela
     private TabelaMorse() {
     }
 }
