@@ -4,7 +4,7 @@ public class Main {
         ArvoreMorse arvore = new ArvoreMorse();
         arvore.carregarAlfabeto();
 
-        ImpressoraArvore impressora = new ImpressoraArvore();
-        impressora.imprimir(arvore.getRaiz());
+        Menu menu = new Menu(arvore, new ImpressoraArvore());
+        menu.executar();
     }
 }
